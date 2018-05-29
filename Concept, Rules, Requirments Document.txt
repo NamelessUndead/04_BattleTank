@@ -1,0 +1,50 @@
+#####CONCEPT#####
+
+a tank game where you fight againts an ai controlled tank or with another player's tank using splitscreen
+you shoot long range missiles and you have 3 hearts when depleted you die.
+
+
+#####RULES#####
+
+how to win: 
+	shoot the other tank 3 times
+how to lose: 
+	the other tank shoots u 3 times
+cant do: 
+	1-get close to the other tank leading to long range fighting
+	2- mountains that block player to leave map
+
+can do:
+	1- climb up mountains
+	2- hide and do sneak attack
+	3-
+
+#####REQS#####
+
+SFX:
+	1- shooting and hitting
+	2- moving
+	3- Good background music track
+	4- Engine sound
+	5- Barell moving
+	6-
+	
+STATIC MESH:
+	1- Simple tank mesh
+	
+TERRAIN:
+	1- Trees 
+	2- Mountains
+	3- Plants
+	4- High mountains all over the map as to not let the player leave it
+
+VISUALE:
+	1- Explosion particles
+	2- Menu system
+	3- Shooting effects (make the tank move backward when shooting)
+
+#####UPGRADING THE GAME#####
+
+add wave system
+add power-ups
+add 3rd persong to 1st person switch
