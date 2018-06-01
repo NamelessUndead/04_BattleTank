@@ -7,3 +7,4 @@ Tank fighting game used for learning C++
 * BT05 Landscape Setup & Scaling
 * BT06 A Landscaping Process
 * BT07 Using Landscape Layers
+* BT08 More Landscaping Tools
