@@ -9,3 +9,4 @@ Tank fighting game used for learning C++
 * BT07 Using Landscape Layers
 * BT08 More Landscaping Tools
 * BT09 Actors From Multiple Meshes
+* BT10 Composing Multi-Part Actors
