@@ -11,3 +11,5 @@ Tank fighting game used for learning C++
 * BT09 Actors From Multiple Meshes
 * BT10 Composing Multi-Part Actors
 * BT11 Configuring A Tank
+* BT12 Using Blueprints to Discover C++
+* BT13 3rd Person Camera Control
