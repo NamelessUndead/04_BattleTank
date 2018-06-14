@@ -14,3 +14,4 @@ Tank fighting game used for learning C++
 * BT12 Using Blueprints to Discover C++
 * BT13 3rd Person Camera Control
 * BT14 Call C++ Functions from Blueprint
+* BT15 Fixing 3rd Person Camera Rotation
