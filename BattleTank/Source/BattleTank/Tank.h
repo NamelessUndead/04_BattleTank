@@ -30,8 +30,17 @@ public:
 	UFUNCTION(BlueprintCallable, Category = Tank)
 	void SetTurretChildActor(UChildActorComponent* TurretFromBP);
 	
+	UFUNCTION(BlueprintCallable, Category = Tank)
+	void SetBarrelChildActor(UChildActorComponent* BarrelFromBP);
+
 private:
-	void RotateTurret();
-	void RotateTurretAnti();
-	UChildActorComponent* Turret;
+
+	// Rotate turret at speed, -ve values for CounterCLockWise 
+	void RotateTurret(float Speed);
+	// Elevates the barrel 
+	void ElevateBarrel(float Speed);
+	// A refrence from Blueprint
+	UChildActorComponent* Turret = nullptr;
+	UChildActorComponent* Barrel = nullptr;
+
 };

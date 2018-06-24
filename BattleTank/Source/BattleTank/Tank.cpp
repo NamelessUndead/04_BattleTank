@@ -11,6 +11,20 @@ ATank::ATank()
 
 }
 
+void ATank::SetTurretChildActor(UChildActorComponent * TurretFromBP)
+{
+	UE_LOG(LogTemp, Warning, TEXT("SetTurretChildActor called"));
+
+	Turret = TurretFromBP;
+}
+
+void ATank::SetBarrelChildActor(UChildActorComponent * BarrelFromBP)
+{
+	UE_LOG(LogTemp, Warning, TEXT("SetTurretChildActor called"));
+
+	Barrel = BarrelFromBP;
+}
+
 // Called when the game starts or when spawned
 void ATank::BeginPlay()
 {
@@ -29,25 +43,19 @@ void ATank::Tick(float DeltaTime)
 void ATank::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
-	InputComponent->BindAction("Turret_Clockwise", IE_Pressed, this, &ATank::RotateTurret);
-	InputComponent->BindAction("Turret_AntiClockwise", IE_Pressed, this, &ATank::RotateTurretAnti);
+	InputComponent->BindAxis("Rotate_Turret",this, &ATank::RotateTurret);
+	InputComponent->BindAxis("Elevate_Barrel", this, &ATank::ElevateBarrel);
 }
 
-void ATank::RotateTurret()
+void ATank::RotateTurret(float Speed)
 {
-	UE_LOG(LogTemp, Warning, TEXT("Rotate turret called"));
-	Turret->SetRelativeRotation(FRotator(0.f,45.f,0.f));
+	if (!Turret) { return; }
+	Turret->AddRelativeRotation(FRotator(0.f,Speed,0.f));
 }
 
-void ATank::SetTurretChildActor(UChildActorComponent * TurretFromBP)
-{
-	UE_LOG(LogTemp, Warning, TEXT("SetTurretChildActor called"));
 
-	Turret = TurretFromBP;
-}
-
-void ATank::RotateTurretAnti()
+void ATank::ElevateBarrel(float Speed)
 {
-	UE_LOG(LogTemp, Warning, TEXT("RotateTurretAnti called"));
-	Turret->SetRelativeRotation(FRotator(0.f, -45.f, 0.f));
+	if (!Barrel) { return; }
+	Barrel->AddRelativeRotation(FRotator(Speed, 0.f, 0.f));
 }
